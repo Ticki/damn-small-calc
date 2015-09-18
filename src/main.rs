@@ -1,8 +1,9 @@
 use std::io;
 use std::io::*;
 
+
 fn main() {
-    println!("Welcome to damn small calculator! Note that it uses inverse polish notation. Syntax for (1 + 1) * 2: 1 1 + 2 *");
+    println!("Welcome to damn small calculator! Note that it uses reverse polish notation. Syntax for (1 + 1) * 2: 1 1 + 2 *");
     loop {
         print!("     > ");
 
@@ -89,6 +90,7 @@ fn main() {
                 _ => {
                     println!("Unknown symbol: {}", i);
                     error = true;
+                    break;
                 },
             }
         }
